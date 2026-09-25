@@ -1,0 +1,14 @@
+policy_id	description	recall	recalled_pairs	missed_pairs	marginal_true_pairs	triggered_s1_count	triggered_s1_pct	avg_candidates	median_candidates	p90_candidates	p95_candidates	p99_candidates	max_candidates	zero_candidate_s1	extra_candidates_from_F	extra_candidates_per_s1	candidates_per_true_pair_recovered	runtime_seconds	peak_memory_mb
+Ref_Backbone_No_F	Reference Backbone (B+C+D+E, No Channel F)	98.0859%	33821	660	0	0	0.00%	836.11	377	2251	3559	5539	9012	1	0	0.00	0.00	0.10	481.38
+Policy_A_k0	Policy A: F only when k == 0	98.0859%	33821	660	0	1	0.01%	836.22	377	2251	3559	5539	9012	0	1118	0.11	0.00	0.08	439.15
+Policy_B1_k5	Policy B1: F when k < 5	98.1120%	33830	651	9	31	0.31%	843.23	381	2272	3570	5555	9012	0	71197	7.12	7910.78	0.04	435.40
+Policy_B2_k10	Policy B2: F when k < 10	98.1381%	33839	642	18	108	1.08%	855.93	385	2291	3594	5690	9527	0	198189	19.82	11010.50	0.05	420.48
+Policy_B3_k20	Policy B3: F when k < 20	98.1700%	33850	631	29	298	2.98%	882.42	396	2371	3637	5826	9527	0	463119	46.31	15969.62	0.07	435.95
+Policy_B4_k50	Policy B4: F when k < 50	98.2976%	33894	587	73	960	9.60%	954.30	423	2669	3737	6154	10780	0	1181841	118.18	16189.60	0.14	445.02
+Policy_C1_Tokens1	Policy C1: tokens <= 1 and has loc tokens	98.4919%	33961	520	140	1127	11.27%	1143.23	428	3400	4849	8506	14083	0	3071213	307.12	21937.24	0.45	533.70
+Policy_C2_Tokens1_NoDig	Policy C2: tokens <= 1 and digits == 0 and has loc tokens	98.2686%	33884	597	63	91	0.91%	869.25	387	2342	3634	5837	10780	0	331347	33.13	5259.48	0.06	536.79
+Policy_C3_ShortName	Policy C3: len(core) <= 6 and has loc tokens	98.1352%	33838	643	17	154	1.54%	852.65	384	2285	3593	5652	10706	1	165367	16.54	9727.47	0.04	540.83
+Policy_D1_NoExact_NoDigMatch	Policy D1: No exact name & No digit match & has loc tokens	98.3324%	33906	575	85	209	2.09%	885.27	391	2432	3656	5869	10474	0	491545	49.15	5782.88	0.08	553.73
+Policy_D2_Hybrid_k10_or_NoEvidence	Policy D2: (k < 10) OR (No exact & No digit match & has loc)	98.3788%	33922	559	101	302	3.02%	902.28	397	2503	3695	5963	10474	0	661672	66.17	6551.21	0.09	556.29
+Policy_D3_Hybrid_k20_or_NoDigits	Policy D3: (k < 20) OR (No exact & digits == 0 & has loc)	98.4020%	33930	551	109	433	4.33%	923.56	405	2602	3725	6123	10474	0	874514	87.45	8023.06	0.33	603.43
+Ref_Unconstrained_F	Reference: Unconstrained F for All S1s	99.9536%	34465	16	644	10000	100.00%	2865.81	1494	7644	9082	11499	17555	0	20296923	2029.69	31516.96	3.29	731.64

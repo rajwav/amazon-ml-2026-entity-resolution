@@ -1,0 +1,7 @@
+policy	recall	recalled_pairs	missed_pairs	recovered_e6_losses	recovered_b19	avg_candidates	median_candidates	p90_candidates	p95_candidates	p99_candidates	max_candidates	zero_candidates	cands_per_tp	runtime_sec
+Ref_E6	99.9275%	34456	25	0/9	3/19	1698.0	1135	4155	5321	7386	10904	0	13572.5	8.33
+Policy_8A_Fallback5	99.9507%	34464	17	8/9	3/19	1719.7	1149	4216	5377	7436	10904	0	13742.0	6.65
+Policy_8A_Fallback3	99.9449%	34462	19	8/9	3/19	1424.8	971	3367	4558	6636	9844	0	9183.6	7.23
+Policy_8B_Top1	99.7883%	34408	73	8/9	3/19	899.7	434	2346	3695	5619	9095	0	1084.0	3.73
+Policy_8B_Top2	99.9420%	34461	20	9/9	3/19	1064.5	588	2625	3949	5876	9239	0	3568.6	2.39
+Policy_8C_QueryAware	99.9275%	34456	25	0/9	3/19	1698.0	1135	4155	5321	7386	10904	0	13572.5	6.04

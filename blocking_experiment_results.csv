@@ -1,0 +1,13 @@
+strategy_id,strategy_name,candidate_recall_pct,true_pairs_recalled,true_pairs_missed,avg_candidates_per_s1,median_candidates_per_s1,p95_candidates_per_s1,max_candidates_per_s1,reduction_ratio_pct,zero_candidate_s1_count,runtime_seconds
+A,Country-Only,100.00%,34481,0,43896.8,50522,50522,50522,48.0394%,0,40.14
+B,Country + Normalized Name,39.12%,13490,20991,1.6,1,4,16,99.9981%,2534,0.17
+C,Country + Significant Name Token,86.01%,29657,4824,347.9,231,1655,3267,99.5882%,17,0.44
+D,Country + Character Prefix (4-char),80.15%,27635,6846,68.3,35,200,711,99.9192%,108,0.09
+E,Country + Address Digit Sequence,75.81%,26141,8340,474.2,37,3369,8827,99.4386%,638,0.48
+F,Country + Address Location Tokens,94.12%,32454,2027,2568.0,1861,8214,14641,96.9603%,3,2.66
+G,Multi-Channel Union (B + C + D + E + F),99.94%,34462,19,3294.6,2621,9555,18372,96.1001%,0,3.57
+G_Top10,Multi-Channel Ranked (Top 10),93.22%,32142,2339,10.0,10,10,10,99.9882%,6,N/A
+G_Top20,Multi-Channel Ranked (Top 20),94.92%,32730,1751,20.0,20,20,20,99.9763%,6,N/A
+G_Top30,Multi-Channel Ranked (Top 30),95.56%,32949,1532,30.0,30,30,30,99.9645%,6,N/A
+G_Top50,Multi-Channel Ranked (Top 50),96.28%,33199,1282,50.0,50,50,50,99.9408%,6,N/A
+G_Top100,Multi-Channel Ranked (Top 100),97.17%,33505,976,100.0,100,100,100,99.8816%,6,N/A

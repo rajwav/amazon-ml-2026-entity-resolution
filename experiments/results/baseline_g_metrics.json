@@ -1,0 +1,17 @@
+{
+  "experiment_id": "Baseline_G",
+  "description": "Strategy G (B + C + D + E + F) Unfiltered Control",
+  "recall": "99.9449%",
+  "recall_pct": 99.94489718975667,
+  "true_pairs": 34481,
+  "recalled_pairs": 34462,
+  "missed_pairs": 19,
+  "avg_candidates": 3294.6375,
+  "median_candidates": 2621,
+  "p95_candidates": 9555,
+  "max_candidates": 18372,
+  "zero_candidate_s1": 0,
+  "candidate_reduction_ratio": "96.1001%",
+  "runtime_seconds": 35.56714200973511,
+  "peak_memory_mb": 374.4765625
+}

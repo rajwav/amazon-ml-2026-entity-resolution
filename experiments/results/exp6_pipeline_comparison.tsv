@@ -1,0 +1,6 @@
+config_id	description	recall	recalled_pairs	missed_pairs	avg_candidates	median_candidates	p90_candidates	p95_candidates	p99_candidates	max_candidates	zero_candidate_s1	total_candidates	candidate_reduction_ratio	runtime_seconds	peak_memory_mb
+1_Baseline_G	Strategy G (B + C + D + E + F) Unfiltered Control	99.9449%	34462	19	3294.64	2621	8012	9555	12450	18372	0	32946375	96.1001%	35.57	374.48
+2_Backbone_BCDE	Core Backbone (B+C+D+E, Selective Translit)	98.0859%	33821	660	836.11	377	2251	3559	5539	9012	1	8361131	99.0103%	1.34	773.95
+3_L1_Only	Level 1 Only (Composite Sieve: C2_Union_All)	95.6266%	32973	1508	104.21	10	325	604	1207	3564	135	1042142	99.8766%	0.41	745.30
+4_L1_U_L2	Cumulative Union: Level 1 ∪ Level 2	98.0859%	33821	660	836.11	377	2251	3559	5539	9012	1	8361131	99.0103%	1.75	710.00
+5_L1_U_L2_U_L3	Cumulative Union: Level 1 ∪ Level 2 ∪ Level 3 (Filtered F)	99.9275%	34456	25	1697.97	1135	4155	5321	7386	10904	0	16979677	97.9901%	8.71	708.59

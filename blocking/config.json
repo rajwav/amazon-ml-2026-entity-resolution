@@ -1,0 +1,58 @@
+{
+  "architecture_version": "Champion_v2_Surgical",
+  "status": "FROZEN",
+  "benchmark_metrics": {
+    "true_pair_recall": "99.9855%",
+    "recalled_pairs": 34476,
+    "total_ground_truth": 34481,
+    "missed_pairs": 5,
+    "avg_candidates_per_s1": 1145.0,
+    "median_candidates_per_s1": 609,
+    "p95_candidates_per_s1": 4250,
+    "max_candidates": 10247,
+    "zero_candidate_s1": 0,
+    "multi_match_complete_recall": "99.94%"
+  },
+  "country_partition": {
+    "enabled": true,
+    "strict_intra_country": true,
+    "supported_countries": ["US", "India", "France"]
+  },
+  "transliteration_policy": {
+    "indic_name_transliteration": true,
+    "indic_address_digits_transliteration": true,
+    "location_tokens_transliteration": false,
+    "accent_stripping_nfkd": true
+  },
+  "frequency_guardrails": {
+    "channel_f_top_k_rarest": 2,
+    "token_2char_max_corpus_frequency": 200,
+    "consonant_trigram_max_corpus_frequency": 50,
+    "state_digit_composite_max_corpus_frequency": 50,
+    "alphanumeric_unit_max_corpus_frequency": 100
+  },
+  "channels": {
+    "L1_exact_name": true,
+    "L1_composite_tok_loc": true,
+    "L1_composite_tok_dig": true,
+    "L1_composite_pref_loc": true,
+    "L1_composite_pref_dig": true,
+    "L1_composite_dig_loc": true,
+    "L2_exact_core_name": true,
+    "L2_significant_tokens": true,
+    "L2_prefix4": true,
+    "L2_address_digits": true,
+    "L3_dynamic_top2_loc": true,
+    "Tail_2char_tokens": true,
+    "Tail_nospace_core_and_domain": true,
+    "Tail_core_collapsed": true,
+    "Tail_composite_digits_loc": true,
+    "Micro_S2_consonant_trigram": true,
+    "Micro_S4_state_digit": true,
+    "Micro_S5_alphanumeric_unit": true
+  },
+  "streaming": {
+    "batch_size": 10000,
+    "memory_ceiling_mb": 4096
+  }
+}

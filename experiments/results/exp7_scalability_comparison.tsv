@@ -1,0 +1,4 @@
+scale	s1_rows	target_rows	ground_truth_pairs	L1_recall	L2_recall	L3_final_recall	missed_pairs	total_candidates	avg_candidates	median_candidates	p90_candidates	p95_candidates	p99_candidates	max_candidates	zero_candidate_s1	candidate_reduction_ratio	total_runtime_sec	peak_ram_mb
+10k_S1	10000	84481	34481	95.6266%	98.0859%	99.9275%	25	16979677	1697.97	1135	4155	5321	7386	10904	0	97.9901%	8.71	708.59
+25k_S1	25000	211205	86264	95.6587%	98.1128%	99.9328%	58	108461169	4338.45	2842	10741	13757	19006	28864	0	97.9459%	84.95	720.72
+50k_S1	50000	421542	172732	95.6667%	98.0704%	99.9444%	96	422958074	8459.16	5581	20706	26625	37041	58359	0	97.9933%	205.82	637.88

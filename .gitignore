@@ -1,0 +1,28 @@
+# Python virtual environments & bytecode
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
+
+# Large raw archives & media files
+*.zip
+*.mp4
+*.tar.gz
+student_resource/dataset/
+
+# In-memory serialized caches & full candidate outputs
+*.pkl
+target_index.pkl
+candidate_pairs.tsv
+candidate_pairs_part*.tsv
+partitions/*.tsv
+experiments/data/baseline_g_candidates.json
+
+# Validation reports & logs
+*.log
+.pytest_cache/

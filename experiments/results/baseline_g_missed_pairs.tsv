@@ -1,0 +1,20 @@
+experiment	s1_entity_id	target_entity_id	source	s1_name	target_name	s1_address	target_address	reason
+Baseline_G	S1-326626722	S2-927342266	S2	TY Cap Inc	TY Inc Partners	IL, Bolingbrook, 623 Boughton Road, Unit 130		target_address_missing_digits
+Baseline_G	S1-565551957	S2-982839186	S2	X & W Flexible	X W & Fceeixble	7623 80, KY, Mayfield		target_address_missing_digits
+Baseline_G	S1-494471528	S2-36296537	S2	Straight Edge Barbershop	Deltazeta	10848 54th Lane, Phoenix, AZ	54TH LN, LAVEEEN, AZ	target_address_missing_digits
+Baseline_G	S1-866946030	S2-226941659	S2	Tri-State Foundation LLC	TRISTATEFOUNDATION.COM	5045 121st Place, Alsip, IL	504 121RD PL, ASLIP CDP, IL	no_shared_name_tokens
+Baseline_G	S1-398144002	S2-312303760	S2	Sibyl's Bakery LLC	@SIBYLSBAKERY	337 Teakwood Terrace, Amherst, NY	NY, BUFFALO, 0195 TEAKWOOD TER	no_shared_name_tokens
+Baseline_G	S1-602029172	S3-630258153	S3	F+ Blockchain LLC	F+ LLC Center	21 Trafton Street, York, ME		target_address_missing_digits
+Baseline_G	S1-599869526	S3-396293193	S3	Decarlo Heritage Electric LLC	Fayeyuma	8418 Ii, WI, Town Of Wolf River	8400 1/2 Ii, Fremont, Wisconsin	no_shared_name_tokens
+Baseline_G	S1-212587898	S3-376794339	S3	Malone Corporation	Mallone Corporation	N1848 Forest Lake Road, Town Of Auburn, WI		no_shared_name_tokens
+Baseline_G	S1-366520393	S2-387969176	S2	Castillo Empire Bny	empirecastillo.com	1711 37th Avenue, Columbia Heights, MN	001711 37ST AVENUE, MINNEAOPLIS, MN	no_shared_name_tokens
+Baseline_G	S1-588078063	S2-453538652	S2	Looper Management	Synciravera	418 199th Place, Lynnwood, WA	199TH PL, LYNNWOOD CIYT, WA	target_address_missing_digits
+Baseline_G	S1-588078063	S2-145387584	S2	Looper Management	lóopermanagement.com	418 199th Place, Lynnwood, WA	199TH PLACE, LYNNWOOD CIYT, WA	target_address_missing_digits
+Baseline_G	S1-202220816	S3-165062500	S3	K+ Willow LLC	K+ Wllrow LLC	1432 Bayberry Court, Chesapeake City, VA		target_address_missing_digits
+Baseline_G	S1-929404506	S3-485699460	S3	Dk Marketing Private Limited	Dk Private Limited Partners #41313	13 Penn Court, Kolkata, Calcutta, West Bengal		target_address_missing_digits
+Baseline_G	S1-786290125	S2-916288616	S2	Al Industries Limited	Mr AL IEDURIES LIMITED	S-115/P, S-116/P, E-City, Raviryal Village, Maheshwaram Mandal, Rangareddy, K.V.Rangareddy, Telangana		target_address_missing_digits
+Baseline_G	S1-388202046	S3-747619520	S3	Jd Services LLP	Jd LLP Partners	Wz-79-C/8, Plot No. G-8, T/F, L/S, Gali No. 7, Virender Nagar, New Delhi, West Delhi, Delhi		target_address_missing_digits
+Baseline_G	S1-103266270	S3-629322375	S3	My Consultancy Private Limited	ಮೈ ಕನ್ಸಲ್ಟೆನ್ಸಿ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್	No.3A, 3B, Elvs Road, Hanumanth Nagar, Puruvankara Main Road, Bilishivalle Village, Bangalore North, Bangalore, Karnataka	No.##3a, Kothanur, KA	no_shared_name_tokens
+Baseline_G	S1-223338943	S3-825985181	S3	TB Tradelinks LLP	TB LLP Center	Shahdara, A 78 Street No 05, Delhi, Shahdara, New Modern Shahdara		target_address_missing_digits
+Baseline_G	S1-606104698	S3-111297978	S3	XF Agricultural Pvt. Ltd.	XF Pvt. Ltd. Ltd. Center	1/104, Rashmi Hetal Iii, Near Ramdev Park, Mira Road East, Thane, Maharashtra		target_address_missing_digits
+Baseline_G	S1-162433474	S2-523017497	S2	Green It Private Limited	GREEN IT PRIVTAE LIMITED	Office No 220 2Nd Floor, Global Business Park, Zirakpur, Mohali, Punjab		target_address_missing_digits

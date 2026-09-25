@@ -1,0 +1,10 @@
+{
+  "total_s1": 10000,
+  "us_s1": 6000,
+  "in_s1": 4000,
+  "total_true_pairs": 34481,
+  "unique_true_targets": 34481,
+  "total_target_pool": 84481,
+  "distractors_count": 50000,
+  "timestamp": "Fri Sep 25 22:45:08 2026"
+}
