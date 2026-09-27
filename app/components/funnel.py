@@ -78,7 +78,7 @@ def render_funnel_view():
             textposition="inside",
             textfont=dict(family="JetBrains Mono, monospace", size=11, color="#ffffff"),
             marker=dict(
-                colors=["#1e293b", "#334155", "#6366f1", "#0284c7", "#10b981"],
+                color=["#1e293b", "#334155", "#6366f1", "#0284c7", "#10b981"],
                 line=dict(width=1, color="rgba(255, 255, 255, 0.15)")
             ),
             connector=dict(line=dict(color="rgba(56, 189, 248, 0.3)", width=1))
