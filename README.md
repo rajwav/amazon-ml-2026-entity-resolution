@@ -129,6 +129,16 @@ The gradient boosted tree model consumes an 11-dimensional feature vector design
 │       │   └── train.py                # Model training and validation script
 │       ├── README.md                   # Code package documentation
 │       └── requirements.txt            # Minimal runtime dependencies
+├── app/                                # Interactive visualization layer (portfolio/demo only)
+│   ├── streamlit_app.py                # Main Streamlit dashboard application
+│   ├── assets/
+│   │   └── styles.css                  # Dark AI-lab theme & glassmorphic styling
+│   └── components/
+│       ├── architecture.py             # Spatial 3D / layered pipeline visualization
+│       ├── entity_graph.py             # Interactive pairwise resolution sandbox
+│       ├── feature_view.py             # 11-feature taxonomy & tree split inspector
+│       ├── funnel.py                   # 17.27T -> 5.15M -> 712K candidate funnel
+│       └── metrics.py                  # Validation & test execution telemetry
 ├── output/
 │   ├── matching_results.tsv            # Final leaderboard prediction output (1.73M rows)
 │   └── README.md                       # Output schema and reproduction instructions
@@ -206,6 +216,28 @@ Execute the unit and integration tests covering candidate ranking, feature extra
 ```bash
 pytest blocking/tests/ -v
 ```
+
+### 5. Launching the Visual Demo (Entity Resolution Lab)
+
+For interactive exploration, architecture walkthroughs, and portfolio demonstration, launch the **Entity Resolution Lab**:
+
+```bash
+# Install visualization dependencies
+pip install -r requirements.txt
+
+# Start the interactive Streamlit application
+streamlit run app/streamlit_app.py
+```
+
+> [!NOTE]
+> The visualization layer is an isolated portfolio demo built around the frozen entity resolution pipeline. It does not modify or interfere with the core ML code or competition submission files.
+
+**Key Demonstration Features**:
+- **Spatial 3D System Pipeline**: Interactive multi-layer visualization with animated data particles, 3D perspective viewport, and deep-dive stage inspector.
+- **Live Pairwise Entity Resolver**: Test the trained LightGBM model on real-world entity benchmarks or custom business inputs with instant feature computation and thresholded decision feedback.
+- **Search-Space Funnel**: Visualizes logarithmic search-space compression from 17.27 Trillion Cartesian pairs down to 5.15 Million blocked candidate pairs and 712,042 resolved entities.
+- **11-Dimensional Feature Matrix**: Exploration of all 11 pairwise similarity signals, formulas, and verified tree split counts.
+- **Telemetry & Metrics**: Comprehensive dashboards separating offline validation ($F_{0.5} = 0.8237$, Precision = $90.54\%$) from 1.73M test inference statistics.
 
 ---
 
