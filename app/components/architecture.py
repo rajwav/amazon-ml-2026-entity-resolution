@@ -164,7 +164,7 @@ def render_architecture_visualization():
         particles_active = st.checkbox("Particle Conduits", value=True, help="Toggle animated data particle flows")
 
     is_3d = (view_mode == "3D Spatial Perspective")
-    transform_css = "transform: perspective(1200px) rotateX(12deg) rotateY(-2deg) scale(0.98);" if is_3d else "transform: none;"
+    transform_css = "transform: perspective(1000px) rotateX(7deg) scale(0.97);" if is_3d else "transform: none;"
 
     # Interactive Stage Node HTML/CSS/JS Component
     html_code = f"""
@@ -178,36 +178,35 @@ def render_architecture_visualization():
             background: transparent;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #f8fafc;
-            overflow-x: hidden;
-            padding: 10px 0;
+            overflow: hidden;
+            padding: 4px 0;
         }}
         
         .viewport {{
             width: 100%;
-            perspective: 1400px;
+            perspective: 1000px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 480px;
         }}
 
         .pipeline-container {{
             width: 100%;
-            max-width: 980px;
+            max-width: 900px;
             background: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.45) 0%, rgba(15, 23, 42, 0.7) 100%);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
-            padding: 30px 20px;
+            border-radius: 14px;
+            padding: 12px 18px 8px 18px;
             position: relative;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
             {transform_css}
         }}
 
         .pipeline-grid {{
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            gap: 5px;
             position: relative;
             z-index: 2;
         }}
@@ -216,47 +215,47 @@ def render_architecture_visualization():
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 16px;
+            gap: 12px;
             position: relative;
         }}
 
         .node {{
             background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
-            padding: 12px 18px;
+            border-radius: 8px;
+            padding: 6px 14px;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
-            gap: 12px;
-            min-width: 220px;
+            gap: 10px;
+            min-width: 240px;
             position: relative;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }}
 
         .node:hover {{
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25);
+            transform: translateY(-2px) scale(1.015);
+            box-shadow: 0 6px 18px rgba(56, 189, 248, 0.25);
             border-color: rgba(56, 189, 248, 0.6);
         }}
 
         .node-active {{
             border-color: #38bdf8 !important;
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4) !important;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4) !important;
             background: rgba(30, 58, 138, 0.4) !important;
         }}
 
         .node-icon {{
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             flex-shrink: 0;
         }}
 
@@ -274,23 +273,25 @@ def render_architecture_visualization():
         }}
 
         .node-title {{
-            font-size: 0.88rem;
+            font-size: 0.78rem;
             font-weight: 700;
             color: #f1f5f9;
             letter-spacing: -0.01em;
+            line-height: 1.2;
         }}
 
         .node-sub {{
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             color: #94a3b8;
             font-family: monospace;
-            margin-top: 2px;
+            margin-top: 1px;
+            line-height: 1.1;
         }}
 
         /* Connecting conduit lines */
         .conduit-vertical {{
             width: 2px;
-            height: 18px;
+            height: 8px;
             background: linear-gradient(180deg, rgba(56, 189, 248, 0.5), rgba(168, 85, 247, 0.5));
             margin: 0 auto;
             position: relative;
@@ -298,12 +299,12 @@ def render_architecture_visualization():
 
         .particle {{
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: 3px;
+            height: 3px;
             border-radius: 50%;
             background: #00f2fe;
-            box-shadow: 0 0 6px #00f2fe;
-            animation: flow 1.5s infinite linear;
+            box-shadow: 0 0 5px #00f2fe;
+            animation: flow 1.2s infinite linear;
             display: {"block" if particles_active else "none"};
         }}
 
@@ -322,11 +323,32 @@ def render_architecture_visualization():
         /* Instructions banner */
         .banner {{
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.72rem;
             color: #64748b;
-            margin-top: 15px;
+            margin-top: 6px;
             letter-spacing: 0.04em;
             text-transform: uppercase;
+        }}
+
+        @media (max-width: 768px) {{
+            .pipeline-container {{
+                padding: 10px 10px 6px 10px;
+                transform: none !important;
+            }}
+            .node {{
+                padding: 5px 10px;
+                min-width: 200px;
+                gap: 8px;
+            }}
+            .node-title {{
+                font-size: 0.72rem;
+            }}
+            .node-sub {{
+                font-size: 0.60rem;
+            }}
+            .conduit-vertical {{
+                height: 6px;
+            }}
         }}
     </style>
     </head>
