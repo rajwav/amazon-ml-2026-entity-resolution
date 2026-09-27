@@ -161,6 +161,13 @@ def render_entity_resolver():
     case_keys = list(DEMO_CASES.keys())
     case_titles = [f"{k}: {DEMO_CASES[k]['title']} ({DEMO_CASES[k]['category']})" for k in case_keys]
 
+    # Initialize state safely before widget instantiation
+    if "s1_case_selector" not in st.session_state:
+        st.session_state["s1_case_selector"] = 0
+
+    def set_selected_case(idx):
+        st.session_state["s1_case_selector"] = idx
+
     # Search / Selectbox
     selected_case_idx = st.selectbox(
         "🔎 Search or choose reference entity:",
@@ -177,10 +184,14 @@ def render_entity_resolver():
     for i, ck in enumerate(case_keys):
         c_info = DEMO_CASES[ck]
         with pill_cols[i]:
-            btn_label = f"**{ck}**\n\n{c_info['sector'][:16]}..."
-            if st.button(c_info['id'], key=f"quick_{ck}", help=f"{c_info['title']}\n{c_info['category']}", use_container_width=True):
-                st.session_state["s1_case_selector"] = i
-                st.rerun()
+            st.button(
+                c_info['id'],
+                key=f"quick_{ck}",
+                on_click=set_selected_case,
+                args=(i,),
+                help=f"{c_info['title']}\n{c_info['category']}",
+                use_container_width=True
+            )
 
     # -------------------------------------------------------------
     # STEP 2: SHOW THE SELECTED S1 REFERENCE CARD
