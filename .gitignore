@@ -34,3 +34,5 @@ experiments/data/baseline_g_candidates.json
 *.log
 .pytest_cache/
 tmp_*/
+.agents/
+.claude/
