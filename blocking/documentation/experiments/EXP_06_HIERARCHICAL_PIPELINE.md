@@ -6,10 +6,10 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Validated (Champion v1 Baseline Architecture)** |
-| **Source Script** | [`experiments/blocking/hierarchical_pipeline.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/hierarchical_pipeline.py) |
-| **Metrics Artifact** | [`experiments/results/exp6_hierarchical_pipeline_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_hierarchical_pipeline_metrics.json) |
-| **Comparison Artifact** | [`experiments/results/exp6_pipeline_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_pipeline_comparison.tsv) |
-| **Remaining Misses Artifact** | [`experiments/results/exp6_remaining_25_misses.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_remaining_25_misses.tsv) |
+| **Source Script** | [`experiments/blocking/hierarchical_pipeline.py`](../../../experiments/blocking/hierarchical_pipeline.py) |
+| **Metrics Artifact** | [`experiments/results/exp6_hierarchical_pipeline_metrics.json`](../../../experiments/results/exp6_hierarchical_pipeline_metrics.json) |
+| **Comparison Artifact** | [`experiments/results/exp6_pipeline_comparison.tsv`](../../../experiments/results/exp6_pipeline_comparison.tsv) |
+| **Remaining Misses Artifact** | [`experiments/results/exp6_remaining_25_misses.tsv`](../../../experiments/results/exp6_remaining_25_misses.tsv) |
 
 ---
 
@@ -55,10 +55,10 @@ $$\text{Candidates}(S1) = \text{L1}(S1) \cup \text{L2}(S1) \cup \text{L3}(S1)$$
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/hierarchical_pipeline.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/hierarchical_pipeline.py)
-- **Metrics JSON**: [`experiments/results/exp6_hierarchical_pipeline_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_hierarchical_pipeline_metrics.json)
-- **Comparison TSV**: [`experiments/results/exp6_pipeline_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_pipeline_comparison.tsv)
-- **Missed Pairs Log**: [`experiments/results/exp6_remaining_25_misses.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_remaining_25_misses.tsv)
+- **Script**: [`experiments/blocking/hierarchical_pipeline.py`](../../../experiments/blocking/hierarchical_pipeline.py)
+- **Metrics JSON**: [`experiments/results/exp6_hierarchical_pipeline_metrics.json`](../../../experiments/results/exp6_hierarchical_pipeline_metrics.json)
+- **Comparison TSV**: [`experiments/results/exp6_pipeline_comparison.tsv`](../../../experiments/results/exp6_pipeline_comparison.tsv)
+- **Missed Pairs Log**: [`experiments/results/exp6_remaining_25_misses.tsv`](../../../experiments/results/exp6_remaining_25_misses.tsv)
 
 ---
 
@@ -88,7 +88,7 @@ $$\text{Candidates}(S1) = \text{L1}(S1) \cup \text{L2}(S1) \cup \text{L3}(S1)$$
 ---
 
 ## 10. Failure / Error Analysis (The 25 Remaining Misses)
-Inspection of [`exp6_remaining_25_misses.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_remaining_25_misses.tsv) revealed:
+Inspection of [`exp6_remaining_25_misses.tsv`](../../../experiments/results/exp6_remaining_25_misses.tsv) revealed:
 - **19 Baseline G Overlaps**: 19 of the 25 misses were the exact same hard-tail misses present in Baseline G (acronyms like "TB", domain handles like `empirecastillo.com`, missing address records).
 - **6 Newly Lost in Level 3**: 6 pairs were lost due to the 5% IDF cutoff on Channel F in metropolitan areas where names were corrupted (e.g., `S1-683744230` `"AS Solution Limited"` vs `"assolution.com"` in Mumbai).
 

@@ -3,8 +3,8 @@
 | Attribute | Specification |
 |:---|:---|
 | **Version** | Champion v1 |
-| **Originating Milestone** | Experiment 06 ([`experiments/blocking/hierarchical_pipeline.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/hierarchical_pipeline.py)) |
-| **Verification Artifact** | [`experiments/results/exp6_hierarchical_pipeline_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp6_hierarchical_pipeline_metrics.json) |
+| **Originating Milestone** | Experiment 06 ([`experiments/blocking/hierarchical_pipeline.py`](../../../experiments/blocking/hierarchical_pipeline.py)) |
+| **Verification Artifact** | [`experiments/results/exp6_hierarchical_pipeline_metrics.json`](../../../experiments/results/exp6_hierarchical_pipeline_metrics.json) |
 | **Lifecycle Status** | **Superseded by Champion v2** |
 
 ---

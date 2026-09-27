@@ -8,11 +8,11 @@ This directory contains the operational architecture, execution runbooks, valida
 
 | File | Purpose |
 |:---|:---|
-| [`README.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/production/README.md) | Navigation and overview of production operations. |
-| [`FULL_SCALE_BLOCKING_PLAN.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/production/FULL_SCALE_BLOCKING_PLAN.md) | Architectural plan for full-scale candidate generation (2.23M queries, 10.3M targets). |
-| [`RUNBOOK.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/production/RUNBOOK.md) | Step-by-step execution guide, CLI commands, hardware constraints, and troubleshooting. |
-| [`VALIDATION_CHECKLIST.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/production/VALIDATION_CHECKLIST.md) | Pre-flight and post-execution data integrity checklists and verification tests. |
-| [`OUTPUT_CONTRACT.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/production/OUTPUT_CONTRACT.md) | Formal interface specification defining the candidate output schema for Phase 3. |
+| [`README.md`](README.md) | Navigation and overview of production operations. |
+| [`FULL_SCALE_BLOCKING_PLAN.md`](FULL_SCALE_BLOCKING_PLAN.md) | Architectural plan for full-scale candidate generation (2.23M queries, 10.3M targets). |
+| [`RUNBOOK.md`](RUNBOOK.md) | Step-by-step execution guide, CLI commands, hardware constraints, and troubleshooting. |
+| [`VALIDATION_CHECKLIST.md`](VALIDATION_CHECKLIST.md) | Pre-flight and post-execution data integrity checklists and verification tests. |
+| [`OUTPUT_CONTRACT.md`](OUTPUT_CONTRACT.md) | Formal interface specification defining the candidate output schema for Phase 3. |
 
 ---
 

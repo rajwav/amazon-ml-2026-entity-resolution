@@ -30,14 +30,12 @@ matching_results.tsv (Submission File)
 
 ---
 
-## 2. Team Functional Roles in Phase 3
+## 2. Core Functional Modules
 
-| Team Member | Branch | Primary Ownership in Phase 3 |
-|:---|:---|:---|
-| **Banamudra** | `banamudra/features-matching` | Lead Feature Engineering & Gradient Boosted Decision Tree (LightGBM/XGBoost) training. |
-| **Shristi** | `shristi/data-error-analysis` | Exploratory data analysis, feature ablation, false positive vs false negative error analysis. |
-| **Abhijeet** | `abhijeet/evaluation-model` | Ground truth validation splitting, Macro $F_{0.5}$ calibration, baseline threshold sweeps. |
-| **Raj** | `raj/blocking` | Pipeline orchestration, memory profiling, and final integration. |
+- `matching/features.py`: Pairwise string and numerical feature engineering.
+- `matching/train_lgbm.py`: Model training pipeline on labeled pilot pairs.
+- `matching/evaluator.py`: Ground truth validation splitting and Macro $F_{0.5}$ evaluation.
+- `matching/run_inference.py`: Production inference pipeline over candidate pairs.
 
 ---
 

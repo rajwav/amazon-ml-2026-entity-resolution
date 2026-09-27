@@ -3,8 +3,8 @@
 | Attribute | Specification |
 |:---|:---|
 | **Version** | Champion v2 Surgical (Official Production Baseline) |
-| **Originating Milestone** | Experiment 10 ([`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py)) |
-| **Verification Artifact** | [`experiments/results/exp10_final_tail_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_metrics.json) |
+| **Originating Milestone** | Experiment 10 ([`experiments/blocking/final_tail_investigation.py`](../../../experiments/blocking/final_tail_investigation.py)) |
+| **Verification Artifact** | [`experiments/results/exp10_final_tail_metrics.json`](../../../experiments/results/exp10_final_tail_metrics.json) |
 | **Lifecycle Status** | **FROZEN & IMMUTABLE (Production Champion)** |
 
 ---

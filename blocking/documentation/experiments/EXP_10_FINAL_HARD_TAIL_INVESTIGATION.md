@@ -6,9 +6,9 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Architecture Finalized (Champion v2 Crowned & Frozen)** |
-| **Source Script** | [`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py) |
-| **Metrics Artifact** | [`experiments/results/exp10_final_tail_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_metrics.json) |
-| **Evaluation TSV** | [`experiments/results/exp10_final_tail_investigation.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_investigation.tsv) |
+| **Source Script** | [`experiments/blocking/final_tail_investigation.py`](../../../experiments/blocking/final_tail_investigation.py) |
+| **Metrics Artifact** | [`experiments/results/exp10_final_tail_metrics.json`](../../../experiments/results/exp10_final_tail_metrics.json) |
+| **Evaluation TSV** | [`experiments/results/exp10_final_tail_investigation.tsv`](../../../experiments/results/exp10_final_tail_investigation.tsv) |
 
 ---
 
@@ -46,9 +46,9 @@ Signals meeting the efficiency threshold ($\le 20,000$ candidates per recovered 
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py)
-- **Metrics JSON**: [`experiments/results/exp10_final_tail_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_metrics.json)
-- **Investigation TSV**: [`experiments/results/exp10_final_tail_investigation.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_investigation.tsv)
+- **Script**: [`experiments/blocking/final_tail_investigation.py`](../../../experiments/blocking/final_tail_investigation.py)
+- **Metrics JSON**: [`experiments/results/exp10_final_tail_metrics.json`](../../../experiments/results/exp10_final_tail_metrics.json)
+- **Investigation TSV**: [`experiments/results/exp10_final_tail_investigation.tsv`](../../../experiments/results/exp10_final_tail_investigation.tsv)
 
 ---
 

@@ -6,9 +6,9 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Evaluated (Threshold Calibrated)** |
-| **Source Script** | [`experiments/blocking/rare_token.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/rare_token.py) |
-| **Metrics Artifact** | [`experiments/results/exp1_rare_token_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp1_rare_token_metrics.json) |
-| **Lost Pairs Artifact** | [`experiments/results/exp1_newly_lost_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp1_newly_lost_pairs.tsv) |
+| **Source Script** | [`experiments/blocking/rare_token.py`](../../../experiments/blocking/rare_token.py) |
+| **Metrics Artifact** | [`experiments/results/exp1_rare_token_metrics.json`](../../../experiments/results/exp1_rare_token_metrics.json) |
+| **Lost Pairs Artifact** | [`experiments/results/exp1_newly_lost_pairs.tsv`](../../../experiments/results/exp1_newly_lost_pairs.tsv) |
 
 ---
 
@@ -48,9 +48,9 @@ Global frequency tables were constructed across all target fields. Inverted inde
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/rare_token.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/rare_token.py)
-- **Metrics JSON**: [`experiments/results/exp1_rare_token_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp1_rare_token_metrics.json)
-- **Lost Pairs Log**: [`experiments/results/exp1_newly_lost_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp1_newly_lost_pairs.tsv)
+- **Script**: [`experiments/blocking/rare_token.py`](../../../experiments/blocking/rare_token.py)
+- **Metrics JSON**: [`experiments/results/exp1_rare_token_metrics.json`](../../../experiments/results/exp1_rare_token_metrics.json)
+- **Lost Pairs Log**: [`experiments/results/exp1_newly_lost_pairs.tsv`](../../../experiments/results/exp1_newly_lost_pairs.tsv)
 
 ---
 
@@ -80,7 +80,7 @@ Global frequency tables were constructed across all target fields. Inverted inde
 ---
 
 ## 10. Failure / Error Analysis (The 14 Newly Lost Pairs in E1_B)
-Inspection of [`exp1_newly_lost_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp1_newly_lost_pairs.tsv) showed:
+Inspection of [`exp1_newly_lost_pairs.tsv`](../../../experiments/results/exp1_newly_lost_pairs.tsv) showed:
 - The 14 newly lost pairs relied exclusively on common geographic location tokens (e.g., large metropolitan names like "Houston", "Delhi", "Bengaluru") where the name tokens had significant spelling variation or typos that failed Channels B, C, D, and E.
 - Suppressing these common tokens globally removed the only bridge connecting the query to the target.
 

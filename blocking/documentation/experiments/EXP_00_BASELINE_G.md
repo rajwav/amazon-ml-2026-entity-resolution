@@ -6,9 +6,9 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Verified (Benchmark Baseline Reference)** |
-| **Source Script** | [`experiments/blocking/baseline_g.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/baseline_g.py) |
-| **Metrics Artifact** | [`experiments/results/baseline_g_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/baseline_g_metrics.json) |
-| **Missed Pairs Artifact** | [`experiments/results/baseline_g_missed_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/baseline_g_missed_pairs.tsv) |
+| **Source Script** | [`experiments/blocking/baseline_g.py`](../../../experiments/blocking/baseline_g.py) |
+| **Metrics Artifact** | [`experiments/results/baseline_g_metrics.json`](../../../experiments/results/baseline_g_metrics.json) |
+| **Missed Pairs Artifact** | [`experiments/results/baseline_g_missed_pairs.tsv`](../../../experiments/results/baseline_g_missed_pairs.tsv) |
 
 ---
 
@@ -60,10 +60,10 @@ $$\text{Candidates}(S1) = \bigcup_{k \in \{B, C, D, E, F\}} \text{Index}_k(S1)$$
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/baseline_g.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/baseline_g.py)
-- **Data Generator**: [`experiments/blocking/setup_pilot_data.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/setup_pilot_data.py)
-- **Metrics JSON**: [`experiments/results/baseline_g_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/baseline_g_metrics.json)
-- **Error Log**: [`experiments/results/baseline_g_missed_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/baseline_g_missed_pairs.tsv)
+- **Script**: [`experiments/blocking/baseline_g.py`](../../../experiments/blocking/baseline_g.py)
+- **Data Generator**: [`experiments/blocking/setup_pilot_data.py`](../../../experiments/blocking/setup_pilot_data.py)
+- **Metrics JSON**: [`experiments/results/baseline_g_metrics.json`](../../../experiments/results/baseline_g_metrics.json)
+- **Error Log**: [`experiments/results/baseline_g_missed_pairs.tsv`](../../../experiments/results/baseline_g_missed_pairs.tsv)
 
 ---
 
@@ -102,7 +102,7 @@ $$\text{Candidates}(S1) = \bigcup_{k \in \{B, C, D, E, F\}} \text{Index}_k(S1)$$
 ---
 
 ## 10. Failure / Error Analysis (The 19 Missed Pairs)
-The 19 missed pairs in [`baseline_g_missed_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/baseline_g_missed_pairs.tsv) were systematically analyzed:
+The 19 missed pairs in [`baseline_g_missed_pairs.tsv`](../../../experiments/results/baseline_g_missed_pairs.tsv) were systematically analyzed:
 1. **Script Discrepancy (Devanagari vs Latin)**: Entity names written in native Hindi script vs Latin transliteration (e.g., "पतंजलि" vs "Patanjali") where neither Channel B nor Channel C could match.
 2. **Extreme Short Names**: 2-character acronyms (e.g., "OM", "BK", "JB") where standard tokenization stripped the tokens or digits were absent.
 3. **Severe Spelling & Phonetic Drift**: Substantial consonant substitutions (e.g., "Empire Castillo" vs `empirecastillo.com`, or `@SIBYLSBAKERY`).

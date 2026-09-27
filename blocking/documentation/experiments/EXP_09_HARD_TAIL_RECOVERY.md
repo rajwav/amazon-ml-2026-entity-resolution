@@ -6,10 +6,10 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Architecture Selected (`Surgical_Tail_Pipeline` Adopted)** |
-| **Source Script** | [`experiments/blocking/tail_recovery_channels.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/tail_recovery_channels.py) |
-| **Metrics Artifact** | [`experiments/results/exp9_tail_recovery_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_tail_recovery_metrics.json) |
-| **Comparison Artifact** | [`experiments/results/exp9_tail_recovery_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_tail_recovery_comparison.tsv) |
-| **Missed Pairs Artifact** | [`experiments/results/exp9_final_missed_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_final_missed_pairs.tsv) |
+| **Source Script** | [`experiments/blocking/tail_recovery_channels.py`](../../../experiments/blocking/tail_recovery_channels.py) |
+| **Metrics Artifact** | [`experiments/results/exp9_tail_recovery_metrics.json`](../../../experiments/results/exp9_tail_recovery_metrics.json) |
+| **Comparison Artifact** | [`experiments/results/exp9_tail_recovery_comparison.tsv`](../../../experiments/results/exp9_tail_recovery_comparison.tsv) |
+| **Missed Pairs Artifact** | [`experiments/results/exp9_final_missed_pairs.tsv`](../../../experiments/results/exp9_final_missed_pairs.tsv) |
 
 ---
 
@@ -52,10 +52,10 @@ Evaluated two integration strategies:
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/tail_recovery_channels.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/tail_recovery_channels.py)
-- **Metrics JSON**: [`experiments/results/exp9_tail_recovery_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_tail_recovery_metrics.json)
-- **Comparison TSV**: [`experiments/results/exp9_tail_recovery_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_tail_recovery_comparison.tsv)
-- **Missed Pairs Log**: [`experiments/results/exp9_final_missed_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_final_missed_pairs.tsv)
+- **Script**: [`experiments/blocking/tail_recovery_channels.py`](../../../experiments/blocking/tail_recovery_channels.py)
+- **Metrics JSON**: [`experiments/results/exp9_tail_recovery_metrics.json`](../../../experiments/results/exp9_tail_recovery_metrics.json)
+- **Comparison TSV**: [`experiments/results/exp9_tail_recovery_comparison.tsv`](../../../experiments/results/exp9_tail_recovery_comparison.tsv)
+- **Missed Pairs Log**: [`experiments/results/exp9_final_missed_pairs.tsv`](../../../experiments/results/exp9_final_missed_pairs.tsv)
 
 ---
 
@@ -90,7 +90,7 @@ Evaluated two integration strategies:
 ---
 
 ## 10. Failure / Error Analysis (The 10 Remaining Misses)
-- The 10 remaining missed true pairs in [`exp9_final_missed_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp9_final_missed_pairs.tsv) represent extreme adversarial corruption:
+- The 10 remaining missed true pairs in [`exp9_final_missed_pairs.tsv`](../../../experiments/results/exp9_final_missed_pairs.tsv) represent extreme adversarial corruption:
   - Complete name substitutions (`"Straight Edge Barbershop"` $\leftrightarrow$ `"Deltazeta"`).
   - Target records with zero address data and severely truncated names.
   - Indian records where Romanized Hindi had non-standard vowel substitutions.

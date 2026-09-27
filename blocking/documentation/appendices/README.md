@@ -8,8 +8,8 @@ This directory contains reference materials, mathematical metric formulations, t
 
 | File | Purpose |
 |:---|:---|
-| [`README.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/appendices/README.md) | Navigation and overview of appendices. |
-| [`METRICS_REFERENCE.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/appendices/METRICS_REFERENCE.md) | Mathematical formulas and definitions for all blocking and challenge metrics. |
-| [`TERMINOLOGY.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/appendices/TERMINOLOGY.md) | Glossary of technical concepts, entity resolution terms, and project terminology. |
-| [`EXPERIMENT_TEMPLATE.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/appendices/EXPERIMENT_TEMPLATE.md) | Standardized 14-section template for logging new experiments. |
-| [`ARTIFACT_INDEX.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/appendices/ARTIFACT_INDEX.md) | Complete inventory of all code scripts, metric JSONs, evaluation TSVs, and markdown docs. |
+| [`README.md`](README.md) | Navigation and overview of appendices. |
+| [`METRICS_REFERENCE.md`](METRICS_REFERENCE.md) | Mathematical formulas and definitions for all blocking and challenge metrics. |
+| [`TERMINOLOGY.md`](TERMINOLOGY.md) | Glossary of technical concepts, entity resolution terms, and project terminology. |
+| [`EXPERIMENT_TEMPLATE.md`](EXPERIMENT_TEMPLATE.md) | Standardized 14-section template for logging new experiments. |
+| [`ARTIFACT_INDEX.md`](ARTIFACT_INDEX.md) | Complete inventory of all code scripts, metric JSONs, evaluation TSVs, and markdown docs. |

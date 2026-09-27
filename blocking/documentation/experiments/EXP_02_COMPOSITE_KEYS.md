@@ -6,10 +6,10 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Architecture Selected (Adopted as Level 1)** |
-| **Source Script** | [`experiments/blocking/composite_keys.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/composite_keys.py) |
-| **Analysis Script** | [`experiments/blocking/analyze_exp2_complement.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/analyze_exp2_complement.py) |
-| **Metrics Artifact** | [`experiments/results/exp2_composite_keys_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp2_composite_keys_metrics.json) |
-| **Error / Complement Artifact** | [`experiments/results/exp2_complement_analysis.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp2_complement_analysis.tsv) |
+| **Source Script** | [`experiments/blocking/composite_keys.py`](../../../experiments/blocking/composite_keys.py) |
+| **Analysis Script** | [`experiments/blocking/analyze_exp2_complement.py`](../../../experiments/blocking/analyze_exp2_complement.py) |
+| **Metrics Artifact** | [`experiments/results/exp2_composite_keys_metrics.json`](../../../experiments/results/exp2_composite_keys_metrics.json) |
+| **Error / Complement Artifact** | [`experiments/results/exp2_complement_analysis.tsv`](../../../experiments/results/exp2_complement_analysis.tsv) |
 
 ---
 
@@ -49,10 +49,10 @@ Following execution, an automated complement analysis (`analyze_exp2_complement.
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/composite_keys.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/composite_keys.py)
-- **Complement Analysis Script**: [`experiments/blocking/analyze_exp2_complement.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/analyze_exp2_complement.py)
-- **Metrics JSON**: [`experiments/results/exp2_composite_keys_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp2_composite_keys_metrics.json)
-- **Complement Analysis TSV**: [`experiments/results/exp2_complement_analysis.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp2_complement_analysis.tsv)
+- **Script**: [`experiments/blocking/composite_keys.py`](../../../experiments/blocking/composite_keys.py)
+- **Complement Analysis Script**: [`experiments/blocking/analyze_exp2_complement.py`](../../../experiments/blocking/analyze_exp2_complement.py)
+- **Metrics JSON**: [`experiments/results/exp2_composite_keys_metrics.json`](../../../experiments/results/exp2_composite_keys_metrics.json)
+- **Complement Analysis TSV**: [`experiments/results/exp2_complement_analysis.tsv`](../../../experiments/results/exp2_complement_analysis.tsv)
 
 ---
 
@@ -85,7 +85,7 @@ Following execution, an automated complement analysis (`analyze_exp2_complement.
 ---
 
 ## 10. Complement Analysis (The 1,528 Missed Pairs)
-Detailed diagnostic in [`exp2_complement_analysis.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp2_complement_analysis.tsv) revealed:
+Detailed diagnostic in [`exp2_complement_analysis.tsv`](../../../experiments/results/exp2_complement_analysis.tsv) revealed:
 1. **Baseline G Recovery**: Baseline G recovered **1,509 of the 1,528 missed pairs** (98.76%).
 2. **Channel Recovery Attribution**:
    - **Channel F (Location)** alone recovered **1,412 pairs** (92.4%).

@@ -18,6 +18,7 @@ from blocking.normalization import (
     extract_alphanumeric_units,
     extract_state_code
 )
+import jellyfish
 
 def jaccard_similarity(set_a: Set[Any], set_b: Set[Any]) -> float:
     """Compute Jaccard similarity between two sets."""
@@ -95,7 +96,23 @@ def extract_pairwise_features(s1_feat: dict, target_feat: dict) -> Dict[str, flo
     # 3. Structural / Missingness Features
     s1_has_address = 1.0 if s1_feat['digits_enriched'] or s1_feat['loc_tokens'] else 0.0
     t_has_address = 1.0 if target_feat['digits_enriched'] or target_feat['loc_tokens'] else 0.0
-    len_diff_core = abs(len(s1_feat['core']) - len(target_feat['core']))
+    len_diff_core = float(abs(len(s1_feat['core']) - len(target_feat['core'])))
+    
+    # 4. New Advanced Features
+    jw_name = jellyfish.jaro_winkler_similarity(s1_feat['core'], target_feat['core'])
+    
+    s1_t_len = len(s1_feat['tokens'])
+    t_t_len = len(target_feat['tokens'])
+    intersect_len = len(set(s1_feat['tokens']) & set(target_feat['tokens']))
+    token_inclusion = intersect_len / min(s1_t_len, t_t_len) if min(s1_t_len, t_t_len) > 0 else 0.0
+    
+    s1_addr = " ".join(list(s1_feat['digits_enriched']) + list(s1_feat['loc_tokens']))
+    t_addr = " ".join(list(target_feat['digits_enriched']) + list(target_feat['loc_tokens']))
+    addr_lev = levenshtein_similarity(s1_addr, t_addr)
+    
+    s1_core_len = len(s1_feat['core'])
+    t_core_len = len(target_feat['core'])
+    length_ratio = min(s1_core_len, t_core_len) / max(s1_core_len, t_core_len) if max(s1_core_len, t_core_len) > 0 else 0.0
 
     return {
         'exact_core_match': exact_core_match,
@@ -115,5 +132,9 @@ def extract_pairwise_features(s1_feat: dict, target_feat: dict) -> Dict[str, flo
         'state_match': state_match,
         's1_has_address': s1_has_address,
         't_has_address': t_has_address,
-        'len_diff_core': float(len_diff_core),
+        'len_diff_core': len_diff_core,
+        'jaro_winkler_name': jw_name,
+        'token_inclusion_ratio': token_inclusion,
+        'address_levenshtein': addr_lev,
+        'length_ratio': length_ratio,
     }

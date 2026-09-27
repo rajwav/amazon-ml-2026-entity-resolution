@@ -6,9 +6,9 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Validated (Scaling Invariants Confirmed)** |
-| **Source Script** | [`experiments/blocking/scalability_benchmark.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/scalability_benchmark.py) |
-| **Metrics Artifact** | [`experiments/results/exp7_scalability_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp7_scalability_metrics.json) |
-| **Comparison Artifact** | [`experiments/results/exp7_scalability_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp7_scalability_comparison.tsv) |
+| **Source Script** | [`experiments/blocking/scalability_benchmark.py`](../../../experiments/blocking/scalability_benchmark.py) |
+| **Metrics Artifact** | [`experiments/results/exp7_scalability_metrics.json`](../../../experiments/results/exp7_scalability_metrics.json) |
+| **Comparison Artifact** | [`experiments/results/exp7_scalability_comparison.tsv`](../../../experiments/results/exp7_scalability_comparison.tsv) |
 
 ---
 
@@ -47,9 +47,9 @@ Monitored peak RAM, runtime per tier, candidate distribution percentiles (P90, P
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/scalability_benchmark.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/scalability_benchmark.py)
-- **Metrics JSON**: [`experiments/results/exp7_scalability_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp7_scalability_metrics.json)
-- **Comparison TSV**: [`experiments/results/exp7_scalability_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp7_scalability_comparison.tsv)
+- **Script**: [`experiments/blocking/scalability_benchmark.py`](../../../experiments/blocking/scalability_benchmark.py)
+- **Metrics JSON**: [`experiments/results/exp7_scalability_metrics.json`](../../../experiments/results/exp7_scalability_metrics.json)
+- **Comparison TSV**: [`experiments/results/exp7_scalability_comparison.tsv`](../../../experiments/results/exp7_scalability_comparison.tsv)
 
 ---
 

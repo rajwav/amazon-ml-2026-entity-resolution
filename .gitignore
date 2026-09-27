@@ -1,5 +1,6 @@
 # Python virtual environments & bytecode
 .venv/
+.venv_arm64/
 __pycache__/
 *.pyc
 *.pyo
@@ -15,14 +16,21 @@ Thumbs.db
 *.tar.gz
 student_resource/dataset/
 
-# In-memory serialized caches & full candidate outputs
+# Serialized model artifacts (un-ignore production models under 100MB)
 *.pkl
+!code/business_entity_resolution/src/model_v2.pkl
+!matching/lgbm_model_v2.pkl
+!matching/lgbm_model.pkl
+
+# Intermediate candidate outputs & caches exceeding GitHub limit (>100MB)
 target_index.pkl
 candidate_pairs.tsv
 candidate_pairs_part*.tsv
+output/candidate_pairs.tsv
 partitions/*.tsv
 experiments/data/baseline_g_candidates.json
 
-# Validation reports & logs
+# Temporary & validation files
 *.log
 .pytest_cache/
+tmp_*/

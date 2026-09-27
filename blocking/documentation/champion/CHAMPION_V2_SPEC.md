@@ -4,7 +4,7 @@
 |:---|:---|
 | **Document Version** | 1.0 (Frozen Production Specification) |
 | **Target Implementation** | Production Candidate Generator |
-| **Reference Implementation** | [`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py) |
+| **Reference Implementation** | [`experiments/blocking/final_tail_investigation.py`](../../../experiments/blocking/final_tail_investigation.py) |
 | **Status** | **OFFICIAL PRODUCTION BLUEPRINT** |
 
 ---

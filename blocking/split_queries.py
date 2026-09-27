@@ -3,7 +3,7 @@
 Deterministic S1 Query Partitioner for Distributed Team Execution.
 
 Partitions the complete test S1 dataset (1,732,544 records) into N deterministic partitions
-(default 4) for parallel execution by team members (Raj, Banamudra, Shristi, Abhijeet).
+(default 4) for parallel execution across distributed workers/processes.
 
 Usage:
   python -m blocking.split_queries \\

@@ -8,11 +8,11 @@ This directory documents the progression, detailed technical specifications, and
 
 | File | Description |
 |:---|:---|
-| [`README.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/champion/README.md) | Navigation and overview of champion architectures. |
-| [`CHAMPION_V1.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/champion/CHAMPION_V1.md) | Architecture, benchmark performance, and retrospective on Champion v1 (Experiment 06). |
-| [`CHAMPION_V2.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/champion/CHAMPION_V2.md) | Architecture, scorecard, and comparative superiority of Champion v2 (Experiment 10). |
-| [`CHAMPION_V2_SPEC.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/champion/CHAMPION_V2_SPEC.md) | Exhaustive, production-grade technical specification and implementation blueprint for Champion v2. |
-| [`FREEZE_RECORD.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/champion/FREEZE_RECORD.md) | Formal engineering freeze declaration locking blocking code and gating transition to Phase 3. |
+| [`README.md`](README.md) | Navigation and overview of champion architectures. |
+| [`CHAMPION_V1.md`](CHAMPION_V1.md) | Architecture, benchmark performance, and retrospective on Champion v1 (Experiment 06). |
+| [`CHAMPION_V2.md`](CHAMPION_V2.md) | Architecture, scorecard, and comparative superiority of Champion v2 (Experiment 10). |
+| [`CHAMPION_V2_SPEC.md`](CHAMPION_V2_SPEC.md) | Exhaustive, production-grade technical specification and implementation blueprint for Champion v2. |
+| [`FREEZE_RECORD.md`](FREEZE_RECORD.md) | Formal engineering freeze declaration locking blocking code and gating transition to Phase 3. |
 
 ---
 

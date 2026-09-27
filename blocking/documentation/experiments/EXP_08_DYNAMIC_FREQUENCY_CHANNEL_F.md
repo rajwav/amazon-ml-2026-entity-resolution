@@ -6,9 +6,9 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Architecture Selected (`Policy_8B_Top2` Adopted)** |
-| **Source Script** | [`experiments/blocking/rare_location_channel.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/rare_location_channel.py) |
-| **Metrics Artifact** | [`experiments/results/exp8_rare_location_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp8_rare_location_metrics.json) |
-| **Comparison Artifact** | [`experiments/results/exp8_rare_location_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp8_rare_location_comparison.tsv) |
+| **Source Script** | [`experiments/blocking/rare_location_channel.py`](../../../experiments/blocking/rare_location_channel.py) |
+| **Metrics Artifact** | [`experiments/results/exp8_rare_location_metrics.json`](../../../experiments/results/exp8_rare_location_metrics.json) |
+| **Comparison Artifact** | [`experiments/results/exp8_rare_location_comparison.tsv`](../../../experiments/results/exp8_rare_location_comparison.tsv) |
 
 ---
 
@@ -44,9 +44,9 @@ Evaluated five distinct target-side location indexing policies in Level 3:
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/rare_location_channel.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/rare_location_channel.py)
-- **Metrics JSON**: [`experiments/results/exp8_rare_location_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp8_rare_location_metrics.json)
-- **Comparison TSV**: [`experiments/results/exp8_rare_location_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp8_rare_location_comparison.tsv)
+- **Script**: [`experiments/blocking/rare_location_channel.py`](../../../experiments/blocking/rare_location_channel.py)
+- **Metrics JSON**: [`experiments/results/exp8_rare_location_metrics.json`](../../../experiments/results/exp8_rare_location_metrics.json)
+- **Comparison TSV**: [`experiments/results/exp8_rare_location_comparison.tsv`](../../../experiments/results/exp8_rare_location_comparison.tsv)
 
 ---
 

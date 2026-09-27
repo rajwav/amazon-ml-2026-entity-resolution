@@ -6,9 +6,9 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Verified (Adopted Selective Architecture)** |
-| **Source Script** | [`experiments/blocking/transliteration.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/transliteration.py) |
-| **Metrics Artifact** | [`experiments/results/exp4_transliteration_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp4_transliteration_metrics.json) |
-| **Recovered Pairs Artifact** | [`experiments/results/exp4_transliteration_recovered_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp4_transliteration_recovered_pairs.tsv) |
+| **Source Script** | [`experiments/blocking/transliteration.py`](../../../experiments/blocking/transliteration.py) |
+| **Metrics Artifact** | [`experiments/results/exp4_transliteration_metrics.json`](../../../experiments/results/exp4_transliteration_metrics.json) |
+| **Recovered Pairs Artifact** | [`experiments/results/exp4_transliteration_recovered_pairs.tsv`](../../../experiments/results/exp4_transliteration_recovered_pairs.tsv) |
 
 ---
 
@@ -52,9 +52,9 @@ Attribution analysis parsed every recovered pair to classify whether recovery or
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/transliteration.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/transliteration.py)
-- **Metrics JSON**: [`experiments/results/exp4_transliteration_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp4_transliteration_metrics.json)
-- **Recovered Pairs TSV**: [`experiments/results/exp4_transliteration_recovered_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp4_transliteration_recovered_pairs.tsv)
+- **Script**: [`experiments/blocking/transliteration.py`](../../../experiments/blocking/transliteration.py)
+- **Metrics JSON**: [`experiments/results/exp4_transliteration_metrics.json`](../../../experiments/results/exp4_transliteration_metrics.json)
+- **Recovered Pairs TSV**: [`experiments/results/exp4_transliteration_recovered_pairs.tsv`](../../../experiments/results/exp4_transliteration_recovered_pairs.tsv)
 
 ---
 
@@ -77,7 +77,7 @@ Attribution analysis parsed every recovered pair to classify whether recovery or
 
 ## 9. Recall & Recovery Analysis
 - In the backbone, transliteration recovered **146 previously lost Indian business matches** (+0.4234% recall boost).
-- Inspection of the 146 recovered pairs in [`exp4_transliteration_recovered_pairs.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp4_transliteration_recovered_pairs.tsv) demonstrated that **100% of the recoveries were driven by Name Transliteration** (Channels B, C, and D), such as:
+- Inspection of the 146 recovered pairs in [`exp4_transliteration_recovered_pairs.tsv`](../../../experiments/results/exp4_transliteration_recovered_pairs.tsv) demonstrated that **100% of the recoveries were driven by Name Transliteration** (Channels B, C, and D), such as:
   - `"Al Estate Private Limited"` $\leftrightarrow$ `"अल एस्टेट प्राइवेट लिमिटेड"`
   - `"Shyam International"` $\leftrightarrow$ `"ಶ್ಯಾಮ್ ಇಂಟರ್‌ನ್ಯಾಷನಲ್"`
   - `"Krishna Solutions Private Limited"` $\leftrightarrow$ `"ક્રિષ્ના Solutions પ્રાઇવેટ લિમિટેડ"`

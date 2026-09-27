@@ -8,10 +8,10 @@ This directory houses the formal Architectural Decision Records (ADRs) governing
 
 | Document | Purpose |
 |:---|:---|
-| [`README.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/decisions/README.md) | Overview of decision framework and ADR methodology. |
-| [`DECISION_LOG.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/decisions/DECISION_LOG.md) | Complete sequential record of all 13 formal architectural decisions (ADR-01 through ADR-13). |
-| [`ACCEPTED_CHANNELS.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/decisions/ACCEPTED_CHANNELS.md) | Exhaustive catalog of all 10 accepted candidate generation channels, keys, and frequency limits. |
-| [`REJECTED_CHANNELS.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/decisions/REJECTED_CHANNELS.md) | Formal record of rejected channels, negative experiments, candidate explosion metrics, and post-mortems. |
+| [`README.md`](README.md) | Overview of decision framework and ADR methodology. |
+| [`DECISION_LOG.md`](DECISION_LOG.md) | Complete sequential record of all 13 formal architectural decisions (ADR-01 through ADR-13). |
+| [`ACCEPTED_CHANNELS.md`](ACCEPTED_CHANNELS.md) | Exhaustive catalog of all 10 accepted candidate generation channels, keys, and frequency limits. |
+| [`REJECTED_CHANNELS.md`](REJECTED_CHANNELS.md) | Formal record of rejected channels, negative experiments, candidate explosion metrics, and post-mortems. |
 
 ---
 

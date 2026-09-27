@@ -6,10 +6,10 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Architecturally Decisive (Hypothesis Disproven / Gate Rejected)** |
-| **Source Script** | [`experiments/blocking/adaptive_blocking.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/adaptive_blocking.py) |
-| **Metrics Artifact** | [`experiments/results/exp5_adaptive_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_adaptive_metrics.json) |
-| **Comparison Artifact** | [`experiments/results/exp5_policy_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_policy_comparison.tsv) |
-| **Tail Analysis Artifact** | [`experiments/results/exp5_backbone_660_analysis.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_backbone_660_analysis.tsv) |
+| **Source Script** | [`experiments/blocking/adaptive_blocking.py`](../../../experiments/blocking/adaptive_blocking.py) |
+| **Metrics Artifact** | [`experiments/results/exp5_adaptive_metrics.json`](../../../experiments/results/exp5_adaptive_metrics.json) |
+| **Comparison Artifact** | [`experiments/results/exp5_policy_comparison.tsv`](../../../experiments/results/exp5_policy_comparison.tsv) |
+| **Tail Analysis Artifact** | [`experiments/results/exp5_backbone_660_analysis.tsv`](../../../experiments/results/exp5_backbone_660_analysis.tsv) |
 
 ---
 
@@ -44,10 +44,10 @@ Ten adaptive $S1$-level gating policies were tested against the $B+C+D+E$ backbo
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/adaptive_blocking.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/adaptive_blocking.py)
-- **Metrics JSON**: [`experiments/results/exp5_adaptive_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_adaptive_metrics.json)
-- **Comparison Table**: [`experiments/results/exp5_policy_comparison.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_policy_comparison.tsv)
-- **Error Analysis**: [`experiments/results/exp5_backbone_660_analysis.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_backbone_660_analysis.tsv)
+- **Script**: [`experiments/blocking/adaptive_blocking.py`](../../../experiments/blocking/adaptive_blocking.py)
+- **Metrics JSON**: [`experiments/results/exp5_adaptive_metrics.json`](../../../experiments/results/exp5_adaptive_metrics.json)
+- **Comparison Table**: [`experiments/results/exp5_policy_comparison.tsv`](../../../experiments/results/exp5_policy_comparison.tsv)
+- **Error Analysis**: [`experiments/results/exp5_backbone_660_analysis.tsv`](../../../experiments/results/exp5_backbone_660_analysis.tsv)
 
 ---
 
@@ -75,7 +75,7 @@ Ten adaptive $S1$-level gating policies were tested against the $B+C+D+E$ backbo
 ---
 
 ## 9. Recall & Recovery Analysis (The Multi-Match Blindspot)
-- Deep analysis of the 660 missed pairs in [`exp5_backbone_660_analysis.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp5_backbone_660_analysis.tsv) revealed the fundamental flaw in the hypothesis:
+- Deep analysis of the 660 missed pairs in [`exp5_backbone_660_analysis.tsv`](../../../experiments/results/exp5_backbone_660_analysis.tsv) revealed the fundamental flaw in the hypothesis:
   - **92.4% of all Channel F-recoverable pairs belong to $S1$ entities that already have at least one correctly recalled target!**
   - Because entity resolution in this dataset is a **1-to-many matching problem** (cardinality up to 17), a query $S1$ may match Target A easily via an exact name match ($k \ge 10$), causing the query-level policy to classify $S1$ as "satisfied" and suppress Channel F.
   - Meanwhile, Target B (a heavily corrupted record belonging to the same entity) was only reachable via Channel F. By suppressing Channel F for query $S1$, Target B was permanently discarded!

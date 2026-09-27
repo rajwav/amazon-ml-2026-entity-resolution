@@ -45,26 +45,26 @@ blocking/
 
 ---
 
-## 3. Team Division of Work: 4-Way Distributed Execution
+## 3. Parallel Distributed Execution (Optional)
 
 The full test query set ($S1$) contains **1,732,544 business records**.
-To execute candidate generation efficiently without single-machine bottlenecks, $S1$ is split into 4 deterministic, mutually exclusive partitions:
+To execute candidate generation efficiently across distributed processes or machines, $S1$ can be split into deterministic, mutually exclusive partitions:
 
 | Worker | Assigned S1 Partition | S1 Row Count | Target Datasets (Full) | Output Candidate File |
 |:---|:---|:---|:---|:---|
-| **Raj** | `partitions/test_s1_part0.tsv` | 432,472 (24.96%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part0.tsv` |
-| **Banamudra** | `partitions/test_s1_part1.tsv` | 433,785 (25.04%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part1.tsv` |
-| **Shristi** | `partitions/test_s1_part2.tsv` | 433,233 (25.01%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part2.tsv` |
-| **Abhijeet** | `partitions/test_s1_part3.tsv` | 433,054 (25.00%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part3.tsv` |
+| **Worker 0** | `partitions/test_s1_part0.tsv` | 432,472 (24.96%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part0.tsv` |
+| **Worker 1** | `partitions/test_s1_part1.tsv` | 433,785 (25.04%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part1.tsv` |
+| **Worker 2** | `partitions/test_s1_part2.tsv` | 433,233 (25.01%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part2.tsv` |
+| **Worker 3** | `partitions/test_s1_part3.tsv` | 433,054 (25.00%) | Complete `test_source2.tsv` + `test_source3.tsv` | `partitions/candidate_pairs_part3.tsv` |
 
 *Note: S2 and S3 are NEVER split. Every worker indexes the complete target corpus ($9,969,589$ records).*
 
 ---
 
-## 4. Execution Commands for Each Team Member
+## 4. Execution Commands for Parallel Workers
 
 ### 4.1 Step 1: Pre-build Target Index (Optional Speedup)
-To avoid having all 4 members rebuild the 10M target index independently, one member can build and serialize the index once:
+To avoid having multiple processes rebuild the 10M target index independently, serialize the index once:
 ```bash
 python -m blocking.run_blocking \
     --s2 student_resource/dataset/test/test_source2.tsv \
@@ -74,7 +74,7 @@ python -m blocking.run_blocking \
 
 ### 4.2 Step 2: Individual Worker Execution Commands
 
-#### Raj:
+#### Worker 0:
 ```bash
 python -m blocking.run_blocking \
     --s1 partitions/test_s1_part0.tsv \
@@ -82,9 +82,8 @@ python -m blocking.run_blocking \
     --s3 student_resource/dataset/test/test_source3.tsv \
     --output partitions/candidate_pairs_part0.tsv
 ```
-*(Or with pre-built index: `--s1 partitions/test_s1_part0.tsv --index target_index.pkl --output partitions/candidate_pairs_part0.tsv`)*
 
-#### Banamudra:
+#### Worker 1:
 ```bash
 python -m blocking.run_blocking \
     --s1 partitions/test_s1_part1.tsv \
@@ -93,7 +92,7 @@ python -m blocking.run_blocking \
     --output partitions/candidate_pairs_part1.tsv
 ```
 
-#### Shristi:
+#### Worker 2:
 ```bash
 python -m blocking.run_blocking \
     --s1 partitions/test_s1_part2.tsv \
@@ -102,7 +101,7 @@ python -m blocking.run_blocking \
     --output partitions/candidate_pairs_part2.tsv
 ```
 
-#### Abhijeet:
+#### Worker 3:
 ```bash
 python -m blocking.run_blocking \
     --s1 partitions/test_s1_part3.tsv \
@@ -113,9 +112,9 @@ python -m blocking.run_blocking \
 
 ---
 
-## 5. Merging & Final Candidate Validation
+## 5. Merging & Candidate Validation
 
-Once all 4 partition files are generated, Raj merges them:
+Once all partition files are generated, merge them:
 ```bash
 python -m blocking.merge_candidates \
     --parts partitions/candidate_pairs_part0.tsv \
@@ -126,7 +125,7 @@ python -m blocking.merge_candidates \
     --output candidate_pairs.tsv
 ```
 
-Then, Abhijeet validates the merged file against all Amazon competition requirements:
+Then validate the merged file:
 ```bash
 python -m blocking.validate_candidates \
     --candidates candidate_pairs.tsv \

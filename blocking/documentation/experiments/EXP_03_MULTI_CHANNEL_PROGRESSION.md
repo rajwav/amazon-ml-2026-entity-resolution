@@ -6,8 +6,8 @@
 | **Date Executed** | 2026-09-25 |
 | **Author / Operator** | Entity Resolution Engineering Team |
 | **Status** | **Completed & Verified (Definitive Channel Decomposition)** |
-| **Source Script** | [`experiments/blocking/multi_channel.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/multi_channel.py) |
-| **Metrics Artifact** | [`experiments/results/exp3_incremental_union_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp3_incremental_union_metrics.json) |
+| **Source Script** | [`experiments/blocking/multi_channel.py`](../../../experiments/blocking/multi_channel.py) |
+| **Metrics Artifact** | [`experiments/results/exp3_incremental_union_metrics.json`](../../../experiments/results/exp3_incremental_union_metrics.json) |
 
 ---
 
@@ -46,8 +46,8 @@ For each step, marginal newly recalled pairs ($\Delta \text{TP}$) and marginal c
 ---
 
 ## 6. Code & Artifact References
-- **Script**: [`experiments/blocking/multi_channel.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/multi_channel.py)
-- **Metrics JSON**: [`experiments/results/exp3_incremental_union_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp3_incremental_union_metrics.json)
+- **Script**: [`experiments/blocking/multi_channel.py`](../../../experiments/blocking/multi_channel.py)
+- **Metrics JSON**: [`experiments/results/exp3_incremental_union_metrics.json`](../../../experiments/results/exp3_incremental_union_metrics.json)
 
 ---
 

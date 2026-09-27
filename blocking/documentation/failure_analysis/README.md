@@ -8,9 +8,9 @@ This directory contains the comprehensive error analysis, historical defect trac
 
 | File | Description |
 |:---|:---|
-| [`README.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/failure_analysis/README.md) | This navigation document and overview of failure methodologies. |
-| [`MISSED_PAIR_HISTORY.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/failure_analysis/MISSED_PAIR_HISTORY.md) | Chronological audit tracking missed true pairs across all 11 experimental milestones. |
-| [`ROOT_CAUSE_ANALYSIS.md`](file:///Users/raj/Desktop/ml%202026%20amazon/blocking/documentation/failure_analysis/ROOT_CAUSE_ANALYSIS.md) | Exhaustive root-cause taxonomy covering all 8 observed failure modes, mechanisms, mitigations, and residue. |
+| [`README.md`](README.md) | This navigation document and overview of failure methodologies. |
+| [`MISSED_PAIR_HISTORY.md`](MISSED_PAIR_HISTORY.md) | Chronological audit tracking missed true pairs across all 11 experimental milestones. |
+| [`ROOT_CAUSE_ANALYSIS.md`](ROOT_CAUSE_ANALYSIS.md) | Exhaustive root-cause taxonomy covering all 8 observed failure modes, mechanisms, mitigations, and residue. |
 
 ---
 

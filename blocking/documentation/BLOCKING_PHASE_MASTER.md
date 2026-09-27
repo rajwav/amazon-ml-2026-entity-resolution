@@ -160,7 +160,7 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 ## 6. Experiment-by-Experiment Analysis
 
 ### Experiment 1: Rare Token & Target IDF Filtering
-- **Script:** [`experiments/blocking/rare_token.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/rare_token.py)
+- **Script:** [`experiments/blocking/rare_token.py`](../../experiments/blocking/rare_token.py)
 - **Objective:** Measure whether dropping high-frequency address tokens from Channel F could curb candidate explosion without sacrificing true matches.
 - **Configurations:**
   - `E1_A` (No filtering / Baseline G): 99.9449% recall, 3,294.6 cands/S1.
@@ -170,14 +170,14 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 - **Decision:** **ACCEPTED** `E1_B` threshold (>5% country pool) as our primary candidate-pruning mechanism.
 
 ### Experiment 2: Composite Blocking Keys
-- **Script:** [`experiments/blocking/composite_keys.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/composite_keys.py)
+- **Script:** [`experiments/blocking/composite_keys.py`](../../experiments/blocking/composite_keys.py)
 - **Objective:** Test whether multi-attribute composite keys (e.g. `(token, location)`, `(digit, location)`) could replace broad single-attribute channels.
 - **Findings:** Standalone composite keys suffered severe recall drops (59.97%–80.37%) and created up to 1,689 zero-candidate queries because noisy records frequently have one corrupted field.
 - **Breakthrough:** Combining all 5 composite keys plus exact core name into `C2_Union_All` achieved **95.57% recall** with only **113.8 candidates/S1 (median: 15)**.
 - **Decision:** `C2_Union_All` was **ACCEPTED** as our ultra-compact **Level 1 Sieve** for hierarchical blocking.
 
 ### Experiment 3: Multi-Channel Incremental Union Analysis
-- **Script:** [`experiments/blocking/multi_channel.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/multi_channel.py)
+- **Script:** [`experiments/blocking/multi_channel.py`](../../experiments/blocking/multi_channel.py)
 - **Objective:** Deconstruct Baseline G channel by channel ($B \rightarrow B+C \rightarrow B+C+D \rightarrow B+C+D+E \rightarrow B+C+D+E+F$) to isolate exact marginal recall and candidate bloat.
 - **Key Findings:**
   - $B$ (Exact Name): 39.12% recall, 1.6 cands/S1.
@@ -188,7 +188,7 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 - **Decision:** Adopted $B+C+D+E$ as our **Core High-Efficiency Backbone** (Level 2).
 
 ### Experiment 4: Indic Script Transliteration Ablation
-- **Script:** [`experiments/blocking/transliteration.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/transliteration.py)
+- **Script:** [`experiments/blocking/transliteration.py`](../../experiments/blocking/transliteration.py)
 - **Objective:** Determine the exact impact of offline Indic script transliteration across Devanagari, Tamil, Telugu, Kannada, and Bengali.
 - **Discovery (Transliteration Asymmetry):**
   - **In Names ($B, C, D$):** Transliteration recovered **155 genuine true pairs** across 6 Indic scripts with virtually zero candidate overhead (**+4.9 candidates/S1**, from 831.2 to 836.1). 100% of newly recovered pairs were attributed to name transliteration.
@@ -196,7 +196,7 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 - **Decision:** **Selective Transliteration** officially adopted: *Transliteration ON for Names and Digits; OFF for generic address location tokens.*
 
 ### Experiment 5: Adaptive / Record-Quality Blocking
-- **Script:** [`experiments/blocking/adaptive_blocking.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/adaptive_blocking.py)
+- **Script:** [`experiments/blocking/adaptive_blocking.py`](../../experiments/blocking/adaptive_blocking.py)
 - **Objective:** Evaluate whether Channel F could be conditionally gated based on $S1$ candidate count ($k < T$) or record completeness.
 - **Discovery (Multi-Match Gating Blindspot):**
   - Analysis of the 660 backbone misses revealed that **92.4% of all Channel F true pairs belonged to multi-match $S1$ entities that had already recalled another target in $BCDE$**.
@@ -204,7 +204,7 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 - **Decision:** **REJECTED** query-level candidate count suppression. Channel F bloat must be controlled strictly via **Target-Side Filtering**.
 
 ### Experiment 6: Hierarchical Fallback Blocking Pipeline
-- **Script:** [`experiments/blocking/hierarchical_pipeline.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/hierarchical_pipeline.py)
+- **Script:** [`experiments/blocking/hierarchical_pipeline.py`](../../experiments/blocking/hierarchical_pipeline.py)
 - **Objective:** Integrate Level 1 (Composite Sieve), Level 2 (Core Backbone), and Level 3 (Target-side 5% IDF-filtered Channel F) into a unified cumulative union ($L1 \cup L2 \cup L3$).
 - **Results:**
   - True-Pair Recall: **99.9275%** (34,456 / 34,481).
@@ -214,7 +214,7 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 - **Decision:** Adopted as baseline production blocker.
 
 ### Experiment 7: Scalability & Robustness Benchmark
-- **Script:** [`experiments/blocking/scalability_benchmark.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/scalability_benchmark.py)
+- **Script:** [`experiments/blocking/scalability_benchmark.py`](../../experiments/blocking/scalability_benchmark.py)
 - **Objective:** Validate recall stability, candidate volume scaling, and memory boundedness across 10k, 25k, 50k $S1$ samples and French test data.
 - **Key Findings:**
   - **Recall Invariance:** Rock-solid at 99.9275% (10k) $\rightarrow$ 99.9328% (25k) $\rightarrow$ **99.9444%** (50k).
@@ -224,13 +224,13 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
   - **France Out-of-Domain Robustness:** Extracted 100% of French legal suffixes (`SARL`, `SAS`, `EURL`, `SA`, `SCI`), achieving 0 zero-candidate queries and 93.50% candidate reduction.
 
 ### Experiment 8: Dynamic Frequency-Aware Channel F
-- **Script:** [`experiments/blocking/rare_location_channel.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/rare_location_channel.py)
+- **Script:** [`experiments/blocking/rare_location_channel.py`](../../experiments/blocking/rare_location_channel.py)
 - **Objective:** Eliminate common-token target starvation (where records with only Mumbai/Delhi had 0 tokens indexed under static 5% cutoff) without causing candidate explosion.
 - **Breakthrough (`Policy_8B_Top2`):** Sorting each target's location tokens by frequency and indexing strictly its **Top-2 rarest tokens** recovered **100% (9/9) of all cutoff losses**, while slashing Channel F candidates by **67.7% vs Baseline G** (from 3,294.6 to **1,064.5 candidates/S1**, median **588**). Recall = **99.9420%**.
 - **Decision:** `Policy_8B_Top2` **ACCEPTED** into production.
 
 ### Experiment 9: Targeted Hard-Tail Recovery Channels
-- **Script:** [`experiments/blocking/tail_recovery_channels.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/tail_recovery_channels.py)
+- **Script:** [`experiments/blocking/tail_recovery_channels.py`](../../experiments/blocking/tail_recovery_channels.py)
 - **Objective:** Systematically address the root causes of the 19 Baseline-G misses.
 - **Discoveries:**
   - **2-Letter Word Channel:** `length >= 3` rule had discarded business acronyms (`TY`, `DK`, `TB`, `XF`, `JD`, `AL`, `IT`). Adding country-partitioned 2-letter tokens recovered all 7 misses for only **+1.4 candidates/S1** (efficiency: 1,998 cands/TP).
@@ -240,7 +240,7 @@ Running `experiments/blocking/baseline_g.py` verified Strategy G with zero discr
 - **Result (`Surgical_Tail_Pipeline`):** **99.9710% recall** (only 10 misses) with **1,140.7 candidates/S1** (-65.38% vs Baseline G).
 
 ### Experiment 10: Final 10-Miss Autopsy & Champion v2 Validation
-- **Script:** [`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py)
+- **Script:** [`experiments/blocking/final_tail_investigation.py`](../../experiments/blocking/final_tail_investigation.py)
 - **Objective:** Final investigation of the 10 remaining missed true pairs to reach empirical saturation.
 - **Micro-Signals Tested:**
   - Consonant Trigram Prefix (`cons_tri`, freq $\le 50$): **+2 TP** (`Willow` vs `Wllrow`, `X & W Flexible` vs `X W & Fceeixble`), efficiency 18,150 cands/TP. **ACCEPTED**.

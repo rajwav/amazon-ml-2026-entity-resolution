@@ -11,7 +11,7 @@
 ---
 
 ## 1. Declaration of Architecture Freeze
-Effective as of the completion and verification of Experiment 10 ([`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py)), the candidate generation (blocking) architecture for the Amazon ML Challenge 2026 Business Entity Resolution project is **OFFICIALLY FROZEN**.
+Effective as of the completion and verification of Experiment 10 ([`experiments/blocking/final_tail_investigation.py`](../../../experiments/blocking/final_tail_investigation.py)), the candidate generation (blocking) architecture for the Amazon ML Challenge 2026 Business Entity Resolution project is **OFFICIALLY FROZEN**.
 
 No further modifications, additions, deletions, or hyperparameter adjustments shall be made to the candidate generation channels, tokenizers, normalizers, or inverted indexes without an explicit, formal Architectural Change Request accompanied by statistical proof of superiority.
 
@@ -48,9 +48,9 @@ Further attempts to recover the remaining 5 missed pairs were empirically invest
 
 ## 4. Verification Checksums & Artifact Signatures
 
-- **Source Implementation Script**: [`experiments/blocking/final_tail_investigation.py`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/blocking/final_tail_investigation.py)
-- **Primary Metrics JSON**: [`experiments/results/exp10_final_tail_metrics.json`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_metrics.json)
-- **Detailed Evaluation TSV**: [`experiments/results/exp10_final_tail_investigation.tsv`](file:///Users/raj/Desktop/ml%202026%20amazon/experiments/results/exp10_final_tail_investigation.tsv)
+- **Source Implementation Script**: [`experiments/blocking/final_tail_investigation.py`](../../../experiments/blocking/final_tail_investigation.py)
+- **Primary Metrics JSON**: [`experiments/results/exp10_final_tail_metrics.json`](../../../experiments/results/exp10_final_tail_metrics.json)
+- **Detailed Evaluation TSV**: [`experiments/results/exp10_final_tail_investigation.tsv`](../../../experiments/results/exp10_final_tail_investigation.tsv)
 - **Benchmark Seed**: `seed=42`
 - **Benchmark Sample**: 10,000 $S1$ records, 84,481 target records, 34,481 ground truth pairs.
 
