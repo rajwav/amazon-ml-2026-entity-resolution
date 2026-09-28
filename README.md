@@ -1,11 +1,25 @@
 # Large-Scale Business Entity Resolution Pipeline
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-FF4B4B?logo=streamlit&logoColor=white)](https://amazon-ml-2026-entity-resolution-hnwtvbbuiuem8anxz9skgd.streamlit.app/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![LightGBM](https://img.shields.io/badge/ML-LightGBM-orange.svg)](https://lightgbm.readthedocs.io/)
 [![Metric: Macro F0.5](https://img.shields.io/badge/Metric-Macro%20F0.5%20%3D%200.8237-brightgreen.svg)](#benchmark-and-evaluation-results)
 
 An industrial-grade, memory-safe machine learning system designed to perform high-precision business entity resolution across millions of noisy, multilingual records. This project addresses the challenge of resolving query entities against massive target repositories under strict runtime and memory constraints.
+
+> 🌐 **Live Interactive Demo**: Try the deployed portfolio demonstration online at [amazon-ml-2026-entity-resolution.streamlit.app](https://amazon-ml-2026-entity-resolution-hnwtvbbuiuem8anxz9skgd.streamlit.app/).
+
+---
+
+## 🚀 Live Demo
+
+🌐 **[Open the Interactive Demo](https://amazon-ml-2026-entity-resolution-hnwtvbbuiuem8anxz9skgd.streamlit.app/)**
+
+Explore the complete entity-resolution pipeline through an interactive Streamlit portfolio demo, including system architecture, entity-resolution exploration, candidate funnel visualization, feature analysis, and model telemetry.
+
+> [!NOTE]
+> The interactive web demo is an isolated portfolio presentation layer built around the frozen entity resolution pipeline. The core repository contains the standalone ML challenge solution, training code, blocking engine, and batch inference artifacts.
 
 ---
 
@@ -217,17 +231,19 @@ Execute the unit and integration tests covering candidate ranking, feature extra
 pytest blocking/tests/ -v
 ```
 
-### 5. Launching the Visual Demo (Entity Resolution Lab)
+### 5. Interactive Visual Demo (Entity Resolution Lab)
 
-For interactive exploration, architecture walkthroughs, and portfolio demonstration, launch the **Entity Resolution Lab**:
+For interactive exploration, architecture walkthroughs, and portfolio demonstration, access the hosted web application or run it locally:
 
-```bash
-# Install visualization dependencies
-pip install -r requirements.txt
+- **Public Cloud Demo**: 🌐 **[Open Live Streamlit Application](https://amazon-ml-2026-entity-resolution-hnwtvbbuiuem8anxz9skgd.streamlit.app/)**
+- **Run Locally**:
+  ```bash
+  # Install visualization dependencies
+  pip install -r requirements.txt
 
-# Start the interactive Streamlit application
-streamlit run app/streamlit_app.py
-```
+  # Start the interactive Streamlit application
+  streamlit run app/streamlit_app.py
+  ```
 
 > [!NOTE]
 > The visualization layer is an isolated portfolio demo built around the frozen entity resolution pipeline. It does not modify or interfere with the core ML code or competition submission files.
